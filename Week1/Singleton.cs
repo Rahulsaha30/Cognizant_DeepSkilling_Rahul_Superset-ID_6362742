@@ -5,7 +5,7 @@ public class Singleton
   //we create a private instance of this student class
   private static Singleton? student;
 
-  //then we create a priavte constructor of this student class so it is not accesible 
+  //then we create a private constructor of this student class so it is not accessible 
   private Singleton(){
     Console.WriteLine("Student created");
   }
