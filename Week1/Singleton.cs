@@ -2,7 +2,7 @@
 
 public class Singleton
 {
-  //we crreate a private instance of this student class
+  //we create a private instance of this student class
   private static Singleton? student;
 
   //then we create a priavte constructor of this student class so it is not accesible 
@@ -32,6 +32,6 @@ class Program
        Singleton obj2 = Singleton.getStudent();
         obj2.studentMessage();
 
-        Console.WriteLine(obj1 == obj2); // True ✅ Same object
+        Console.WriteLine(obj1 == obj2); 
     }
 }
