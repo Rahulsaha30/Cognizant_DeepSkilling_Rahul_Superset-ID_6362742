@@ -1,0 +1,9 @@
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\bin\Debug\net9.0\CustomerCommLib.deps.json
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\bin\Debug\net9.0\CustomerCommLib.dll
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\bin\Debug\net9.0\CustomerCommLib.pdb
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\CustomerCommLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\CustomerCommLib.csproj.CoreCompileInputs.cache
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\CustomerCommLib.dll
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\refint\CustomerCommLib.dll
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\CustomerCommLib.pdb
+C:\Users\KIIT\CustomerCommApp\CustomerCommLib\obj\Debug\net9.0\ref\CustomerCommLib.dll
