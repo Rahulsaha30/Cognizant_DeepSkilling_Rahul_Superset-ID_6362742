@@ -1,0 +1,72 @@
+/*
+ * Lab 1: Understanding ORM with a Retail Inventory System
+ *
+ * Scenario:
+ * We're building a system for a retail shop to manage products, 
+ * categories, and stock. This data is stored in a SQL Server database.
+ * We'll use EF Core 8.0 (Entity Framework Core) to interact with the database
+ * using C# code — no need to write raw SQL.
+ **/
+
+/* 
+ * 1. What is ORM?
+ * 
+ * ORM stands for "Object-Relational Mapping".
+ * It helps us connect our C# classes (like Product and Category)
+ * to database tables without writing SQL queries manually.
+ * 
+ * ➤ Example:
+ *     - C# class: public class Product { public int Id; public string Name; }
+ *     - SQL table: Products with columns Id and Name.
+ *     - EF Core automatically handles the conversion between them.
+ * 
+ * ➤ Benefits of ORM:
+ *     - Easy to code – no SQL needed for basic tasks
+ *     - Easy to maintain – cleaner and more readable C# code
+ *     - Safe and efficient – avoids SQL injection, reduces human error
+ */
+
+
+/* 
+ * 2. EF Core vs EF Framework (EF6)
+ * 
+ * ➤ EF Core:
+ *     - Works on Windows, Linux, Mac (cross-platform)
+ *     - Faster and lightweight
+ *     - Supports modern features like async LINQ queries
+ *     - Recommended for new projects
+ * 
+ * ➤ EF Framework (also called EF6):
+ *     - Only works on Windows
+ *      -Heavier and older
+ *      -Fewer modern features
+ *      -Still used in older or legacy projects
+ */
+
+
+/* 
+ * 3. New Features in EF Core 8.0
+ * 
+ * ➤ JSON Column Mapping:
+ *     - You can store a full C# object as JSON in a single database column.
+ *     - Useful for complex data or logs.
+ * 
+ * ➤ Compiled Models:
+ *     - Makes your app faster by pre-compiling the model.
+ *     - Good for large apps with many entities.
+ * 
+ * ➤ Interceptors:
+ *     - You can track or change queries before they run.
+ *     - Useful for logging, debugging, or adding security.
+ * 
+ * ➤ Better Bulk Operations:
+ *     - Insert/update/delete many records quickly and efficiently.
+ */
+
+
+/*
+ *  Summary:
+ * EF Core is a tool that lets you talk to your SQL database using C# objects.
+ * You don’t write SQL — you write code like `context.Products.Add(...)` instead.
+ * It’s cleaner, safer, and great for productivity — perfect for apps like this RetailInventory system.
+ */
