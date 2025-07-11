@@ -1,0 +1,146 @@
+// 1. Concept of RESTful Web Service, Web API & Microservice
+
+// RESTful Web service: It follow REST architecture rules. 
+// REST means Representational State Transfer. It uses HTTP methods to do actions on resources.
+// Web API: It is a way to make our app talk with other apps using HTTP (like GET, POST).
+// Microservice: It is like small small service (like modules), each service does one work.
+// Eg: Login service, Order service, Payment service all separate.
+
+// Features of REST Architecture
+
+// - Representational State Transfer (REST) → It means data transfer using format like JSON or XML.
+// - Stateless → Server no remember anything about client. Every request is new.
+// - Messages → Communication happens through HTTP messages (Request + Response).
+// - Not restricted to XML → We can send JSON, plain text, anything. JSON mostly used.
+// - Microservice friendly → REST APIs are best to connect many small services together.
+
+// Difference between WebService and WebAPI
+
+// WebService: 
+// - Uses SOAP protocol (heavy).
+// - Data mostly in XML only.
+// - Need more config.
+// WebAPI: 
+// - Uses HTTP protocol directly.
+// - Can send data in JSON or XML or both.
+// - Lightweight, fast, and easy.
+
+
+// 2. What is HttpRequest and HttpResponse?
+
+// HttpRequest: This is what client send to server. It contain URL, method (GET/POST), headers, body etc.
+// HttpResponse: This is what server send back to client. It contain status code, data (JSON), headers etc.
+
+
+// 3. Types of Action Verbs in Web API
+
+// - HttpGet → To get/fetch data
+// - HttpPost → To add new data
+// - HttpPut → To update existing data fully
+// - HttpDelete → To remove/delete data
+
+// These are written as attribute on top of action method like:
+// [HttpGet], [HttpPost], [HttpPut("{id}")], [HttpDelete("{id}")]
+
+
+// 4. Types of HttpStatusCodes used in WebAPI
+
+// - 200 OK → Success
+// - 400 BadRequest → Client sent wrong data
+// - 401 Unauthorized → User not allowed (login needed maybe)
+// - 500 InternalServerError → Server code crash or issue
+
+// These used like: return Ok(data), return BadRequest(), return Unauthorized(), return StatusCode(500)
+
+
+// 5. Creation of simple WebAPI – with Read, Write actions
+
+// Structure of Web API:
+// - Controller file → Ends with "Controller", like ValuesController
+// - Controller inherit from ApiController or ControllerBase
+// - Each method is action method with attribute like [HttpGet], [HttpPost]
+
+// Example:
+
+/*
+using Microsoft.AspNetCore.Mvc;
+
+[ApiController]
+[Route("api/[controller]")]
+public class ValuesController : ControllerBase
+{
+    [HttpGet]
+    public ActionResult<IEnumerable<string>> Get()
+    {
+        return new string[] { "value1", "value2" };
+    }
+
+    [HttpPost]
+    public IActionResult Post([FromBody] string value)
+    {
+        return Ok("Received: " + value);
+    }
+}
+*/
+
+
+// 6. Configuration Files in Web API
+
+// a) Startup.cs (or Program.cs in latest .NET):
+// - It is main config file for app.
+// - We add services here like AddControllers(), AddSwaggerGen(), AddDbContext() etc.
+// - It also configures middleware like UseRouting(), UseAuthorization(), etc.
+
+// b) appSettings.json:
+// - Like a dictionary file for app.
+// - Store connection strings, keys, config values.
+
+// Example:
+/*
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=MyDb;Trusted_Connection=True;"
+  }
+}
+*/
+
+// c) launchSettings.json:
+// - Used only when running app locally.
+// - Store the port number, profile name, etc.
+
+// Example:
+/*
+"profiles": {
+  "FirstWebApi": {
+    "applicationUrl": "https://localhost:5001;http://localhost:5000"
+  }
+}
+*/
+
+
+// d) Old .NET Framework (.NET 4.5)
+
+// Route.config:
+// - Define routing rules for Web Forms.
+
+// WebApiConfig.cs:
+// - Define Web API routes here in App_Start folder.
+
+// Example:
+/*
+public static class WebApiConfig
+{
+    public static void Register(HttpConfiguration config)
+    {
+        config.MapHttpAttributeRoutes();
+
+        config.Routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { id = RouteParameter.Optional }
+        );
+    }
+}
+*/
+
+// 
