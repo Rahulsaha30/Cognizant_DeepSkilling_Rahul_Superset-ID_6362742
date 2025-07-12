@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("thirdhandson")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f59f6b3550153a33513247662d178cc9f2f7687")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54fd550c0a567bc2753fb94f76f90b273fe40103")]
 [assembly: System.Reflection.AssemblyProductAttribute("thirdhandson")]
 [assembly: System.Reflection.AssemblyTitleAttribute("thirdhandson")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -4,22 +4,22 @@ using thirdhandson.Filters;
 
 namespace thirdhandson.Controllers
 {
-    [ApiController]
-    [Route("api/emp")]
-    [ServiceFilter(typeof(CustomAuthFilter))]  
-    public class EmployeeController : ControllerBase
+  [ApiController]
+  [Route("api/emp")]
+  [ServiceFilter(typeof(CustomAuthFilter))]
+  public class EmployeeController : ControllerBase
+  {
+    private readonly List<Employee> _employees;
+
+    public EmployeeController()
     {
-        private readonly List<Employee> _employees;
+      _employees = GetStandardEmployeeList();
+    }
 
-        public EmployeeController()
-        {
-            _employees = GetStandardEmployeeList();
-        }
 
-     
-        private List<Employee> GetStandardEmployeeList()
-        {
-            return new List<Employee>
+    private List<Employee> GetStandardEmployeeList()
+    {
+      return new List<Employee>
             {
                 new Employee
                 {
@@ -40,26 +40,57 @@ namespace thirdhandson.Controllers
                     }
                 }
             };
-        }
+    }
+
+
+    [HttpGet]
+    [ProducesResponseType(typeof(List<Employee>), 200)]
+    [ProducesResponseType(500)] // For custom exception filter
+    public ActionResult<List<Employee>> Get()
+    {
+
+      // throw new Exception("Testing custom exception filter!");
+
+      return _employees;
+    }
+
+
+    [HttpPost]
+    public ActionResult<Employee> Post([FromBody] Employee employee)
+    {
+      _employees.Add(employee);
+      return Ok(employee);
+    }
+        
+        [HttpPut("{id}")]
+public ActionResult<Employee> Put(int id, [FromBody] Employee updatedEmployee)
+{
+    
+    if (id <= 0)
+    {
+        return BadRequest("Invalid employee id");
+    }
 
    
-        [HttpGet]
-        [ProducesResponseType(typeof(List<Employee>), 200)]
-        [ProducesResponseType(500)] // For custom exception filter
-        public ActionResult<List<Employee>> Get()
-        {
-          
-            // throw new Exception("Testing custom exception filter!");
+    var existingEmployee = _employees.FirstOrDefault(e => e.Id == id);
 
-            return _employees;
-        }
+   
+    if (existingEmployee == null)
+    {
+        return BadRequest("Invalid employee id");
+    }
 
-      
-        [HttpPost]
-        public ActionResult<Employee> Post([FromBody] Employee employee)
-        {
-            _employees.Add(employee);
-            return Ok(employee);
-        }
+   
+    existingEmployee.Name = updatedEmployee.Name;
+    existingEmployee.Salary = updatedEmployee.Salary;
+    existingEmployee.Permanent = updatedEmployee.Permanent;
+    existingEmployee.Department = updatedEmployee.Department;
+    existingEmployee.Skills = updatedEmployee.Skills;
+    existingEmployee.DateOfBirth = updatedEmployee.DateOfBirth;
+
+    
+    return Ok(existingEmployee);
+}
+
     }
 }
