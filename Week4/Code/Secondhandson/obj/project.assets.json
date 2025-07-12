@@ -484,11 +484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\FirstWebApi\\FirstWebApi.csproj",
-      "projectName": "FirstWebApi",
-      "projectPath": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\FirstWebApi\\FirstWebApi.csproj",
+      "projectUniqueName": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\Secondhandson\\Secondhandson.csproj",
+      "projectName": "Secondhandson",
+      "projectPath": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\Secondhandson\\Secondhandson.csproj",
       "packagesPath": "C:\\Users\\KIIT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\FirstWebApi\\obj\\",
+      "outputPath": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week4\\Code\\Secondhandson\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

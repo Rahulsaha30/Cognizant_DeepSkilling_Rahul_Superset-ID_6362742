@@ -1,0 +1,6 @@
+@Secondhandson_HostAddress = http://localhost:5291
+
+GET {{Secondhandson_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
