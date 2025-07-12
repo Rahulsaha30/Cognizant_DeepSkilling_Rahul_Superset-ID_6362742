@@ -1,0 +1,6 @@
+@thirdhandson_HostAddress = http://localhost:5294
+
+GET {{thirdhandson_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
