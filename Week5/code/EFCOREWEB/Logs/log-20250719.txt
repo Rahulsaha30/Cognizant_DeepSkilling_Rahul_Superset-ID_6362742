@@ -1,0 +1,5 @@
+2025-07-19 16:00:11.911 +05:30 [INF] User profile is available. Using 'C:\Users\KIIT\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-19 16:00:12.095 +05:30 [INF] Now listening on: http://localhost:5037
+2025-07-19 16:00:12.099 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-19 16:00:12.100 +05:30 [INF] Hosting environment: Development
+2025-07-19 16:00:12.102 +05:30 [INF] Content root path: C:\Users\KIIT\Documents\Deep Learning\Week5\code\EFCOREWEB

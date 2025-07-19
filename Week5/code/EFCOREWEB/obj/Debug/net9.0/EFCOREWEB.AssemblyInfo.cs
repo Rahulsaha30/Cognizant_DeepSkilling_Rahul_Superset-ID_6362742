@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCOREWEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1e3923340b1c2e7e5fec0e2b498c0fb8cb072897")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d6cf7e1bc1736ea1d07ccb36d29e95888e07dcb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCOREWEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCOREWEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

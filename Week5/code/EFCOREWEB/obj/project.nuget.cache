@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1efXucFZpgU=",
+  "dgSpecHash": "h6FEu52+twE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\KIIT\\EFCOREWEB\\EFCOREWEB.csproj",
+  "projectFilePath": "C:\\Users\\KIIT\\Documents\\Deep Learning\\Week5\\code\\EFCOREWEB\\EFCOREWEB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KIIT\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\KIIT\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
